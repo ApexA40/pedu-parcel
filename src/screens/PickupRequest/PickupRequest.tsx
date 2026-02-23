@@ -206,7 +206,7 @@ export const PickupRequest = (): JSX.Element => {
               {/* Pickup Location */}
               <section>
                 <div className="flex items-center gap-2 mb-4">
-                  <MapPinIcon className="w-5 h-5 text-[#ea690c]" />
+                  <MapPinIcon className="w-5 h-5 text-[#007bff]" />
                   <h2 className="text-lg font-semibold text-neutral-800">Pickup Location</h2>
                 </div>
                 <p className="text-sm text-gray-600 mb-4">Where should we pick up the parcel from?</p>
@@ -251,7 +251,7 @@ export const PickupRequest = (): JSX.Element => {
                         value={form.pickupContactPhone.startsWith("+233") ? form.pickupContactPhone.substring(4) : form.pickupContactPhone}
                         onChange={(e) => updatePhoneField("pickupContactPhone", e.target.value)}
                         placeholder="0XXXXXXXXX or XXXXXXXXX"
-                        className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#ea690c] focus:border-[#ea690c]"
+                        className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#007bff] focus:border-[#007bff]"
                         maxLength={10}
                       />
                     </div>
@@ -264,7 +264,7 @@ export const PickupRequest = (): JSX.Element => {
               {/* Delivery Location */}
               <section>
                 <div className="flex items-center gap-2 mb-4">
-                  <TruckIcon className="w-5 h-5 text-[#ea690c]" />
+                  <TruckIcon className="w-5 h-5 text-[#007bff]" />
                   <h2 className="text-lg font-semibold text-neutral-800">Delivery Location</h2>
                 </div>
                 <p className="text-sm text-gray-600 mb-4">Where should we deliver the parcel to?</p>
@@ -309,7 +309,7 @@ export const PickupRequest = (): JSX.Element => {
                         value={form.recipientPhone.startsWith("+233") ? form.recipientPhone.substring(4) : form.recipientPhone}
                         onChange={(e) => updatePhoneField("recipientPhone", e.target.value)}
                         placeholder="0XXXXXXXXX or XXXXXXXXX"
-                        className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#ea690c] focus:border-[#ea690c]"
+                        className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#007bff] focus:border-[#007bff]"
                         maxLength={10}
                       />
                     </div>
@@ -322,7 +322,7 @@ export const PickupRequest = (): JSX.Element => {
               {/* Parcel Details */}
               <section>
                 <div className="flex items-center gap-2 mb-4">
-                  <PackageIcon className="w-5 h-5 text-[#ea690c]" />
+                  <PackageIcon className="w-5 h-5 text-[#007bff]" />
                   <h2 className="text-lg font-semibold text-neutral-800">Parcel Details</h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -432,7 +432,7 @@ export const PickupRequest = (): JSX.Element => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-[#ea690c] text-white hover:bg-[#ea690c]/90"
+                  className="bg-[#007bff] text-white hover:bg-[#007bff]/90"
                 >
                   {isSubmitting ? (
                     <>

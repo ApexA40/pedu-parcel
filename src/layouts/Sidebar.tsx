@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { X, InboxIcon, ClipboardListIcon, TruckIcon, DollarSignIcon, Layers, SearchIcon, Package, Users, Building2, LogOut, Edit, MapPin } from "lucide-react";
 import { useStation } from "../contexts/StationContext";
+import { Button } from "../components/ui/button";
 
 interface SidebarProps {
     isOpen: boolean;
@@ -36,6 +37,7 @@ const navItems = [
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     const location = useLocation();
     const { userRole, currentUser, logout } = useStation();
+    const [showLogoutModal, setShowLogoutModal] = useState(false);
 
     // Filter nav items based on user role
     const filteredNavItems = navItems.filter(item =>
@@ -74,10 +76,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center gap-2">
-                        <div className="font-semibold text-[#ea690c]">
+                        <div className="font-semibold text-[#007bff]">
                             Pedu Junction Parcel
                         </div>
-
                     </div>
 
                     <div className="text-sm font-semibold text-[#5d5d5d]">
@@ -97,7 +98,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                                 to={item.path}
                                 onClick={onToggle}
                                 className={`flex items-center gap-3 rounded-xl px-4 py-3 font-medium transition-colors ${isActive
-                                    ? "bg-[#ea690c] text-white shadow-[0_1px_2px_rgba(0,0,0,0.05)]"
+                                    ? "bg-[#007bff] text-white shadow-[0_1px_2px_rgba(0,0,0,0.05)]"
                                     : "border border-transparent text-[#5d5d5d] hover:border-[#f0f0f0] hover:bg-gray-50"
                                     }`}
                             >
@@ -111,10 +112,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                 {/* Logout Button Only - User info shown in navbar - Fixed at bottom */}
                 <div className="border-t border-[#d1d1d1] p-4 flex-shrink-0">
                     <button
-                        onClick={() => {
-                            logout();
-                            window.location.href = "/login";
-                        }}
+                        onClick={() => setShowLogoutModal(true)}
                         className="flex w-full items-center gap-3 rounded-xl bg-red-50 px-4 py-3 font-medium text-[#e22420] transition-colors hover:bg-red-100"
                     >
                         <LogOut size={20} />
@@ -122,6 +120,36 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                     </button>
                 </div>
             </aside>
+
+            {/* Custom Logout Confirmation Modal */}
+            {showLogoutModal && (
+                <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+                    <div className="w-full max-w-md rounded-lg border border-[#d1d1d1] bg-white shadow-lg p-6">
+                        <h2 className="text-lg font-bold text-neutral-800 mb-2">Confirm Logout</h2>
+                        <p className="text-sm text-[#5d5d5d] mb-4">
+                            Are you sure you want to logout from your Pedu Junction Parcel account?
+                        </p>
+                        <div className="flex gap-3 justify-end">
+                            <Button
+                                variant="outline"
+                                className="border border-[#d1d1d1]"
+                                onClick={() => setShowLogoutModal(false)}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                className="bg-[#e22420] text-white hover:bg-red-600"
+                                onClick={() => {
+                                    logout();
+                                    window.location.href = "/login";
+                                }}
+                            >
+                                Logout
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     );
 };

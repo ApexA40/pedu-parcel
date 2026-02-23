@@ -73,8 +73,8 @@ const CostInput = React.forwardRef<HTMLInputElement, CostInputProps>(
                 className={cn(
                   "rounded-md border px-2.5 py-1 text-xs font-medium transition-colors",
                   value === undefined || value === null
-                    ? "border-[#ea690c] bg-[#ea690c]/10 text-[#ea690c]"
-                    : "border-[#d1d1d1] bg-white text-neutral-700 hover:border-[#ea690c]/50 hover:bg-gray-50"
+                    ? "border-[#007bff] bg-[#007bff]/10 text-[#007bff]"
+                    : "border-[#d1d1d1] bg-white text-neutral-700 hover:border-[#007bff]/50 hover:bg-gray-50"
                 )}
               >
                 Leave blank
@@ -88,8 +88,8 @@ const CostInput = React.forwardRef<HTMLInputElement, CostInputProps>(
                 className={cn(
                   "rounded-md border px-2.5 py-1 text-xs font-medium transition-colors",
                   value === preset
-                    ? "border-[#ea690c] bg-[#ea690c]/10 text-[#ea690c]"
-                    : "border-[#d1d1d1] bg-white text-neutral-700 hover:border-[#ea690c]/50 hover:bg-gray-50"
+                    ? "border-[#007bff] bg-[#007bff]/10 text-[#007bff]"
+                    : "border-[#d1d1d1] bg-white text-neutral-700 hover:border-[#007bff]/50 hover:bg-gray-50"
                 )}
               >
                 {preset}

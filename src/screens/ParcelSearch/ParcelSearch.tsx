@@ -341,7 +341,7 @@ export const ParcelSearch = (): JSX.Element => {
                                 <Button
                                     onClick={() => setShowFilters(!showFilters)}
                                     variant={showFilters ? "default" : "outline"}
-                                    className={`flex items-center gap-2 ${showFilters ? "bg-[#ea690c] text-white" : "border border-[#d1d1d1]"
+                                    className={`flex items-center gap-2 ${showFilters ? "bg-[#007bff] text-white" : "border border-[#d1d1d1]"
                                         }`}
                                 >
                                     <FilterIcon size={18} />
@@ -350,7 +350,7 @@ export const ParcelSearch = (): JSX.Element => {
                                 <Button
                                     onClick={handleExport}
                                     size="sm"
-                                    className="bg-[#ea690c] text-white hover:bg-[#ea690c]/90 flex items-center gap-2 h-8 text-xs"
+                                    className="bg-[#007bff] text-white hover:bg-[#007bff]/90 flex items-center gap-2 h-8 text-xs"
                                 >
                                     <Download size={14} />
                                     Export
@@ -392,7 +392,7 @@ export const ParcelSearch = (): JSX.Element => {
                                                         status: e.target.value,
                                                     }))
                                                 }
-                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c]"
+                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff]"
                                             >
                                                 <option value="">All Status</option>
                                                 <option value="registered">Registered</option>
@@ -415,7 +415,7 @@ export const ParcelSearch = (): JSX.Element => {
                                                         shelfLocation: e.target.value,
                                                     }))
                                                 }
-                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c]"
+                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff]"
                                             >
                                                 <option value="">All Shelves</option>
                                                 {uniqueShelves.map((shelf) => (
@@ -496,16 +496,16 @@ export const ParcelSearch = (): JSX.Element => {
                     {/* Results Summary */}
                     {loading ? (
                         <div className="text-center py-8">
-                            <Loader className="w-8 h-8 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                            <Loader className="w-8 h-8 text-[#007bff] mx-auto mb-4 animate-spin" />
                             <p className="text-sm text-neutral-700">Loading parcels...</p>
                         </div>
                     ) : (
                         <>
                             <div className="flex items-center justify-between text-xs text-[#5d5d5d] mb-2">
-                                <span className="flex items-center gap-2">
+                                    <span className="flex items-center gap-2">
                                     Showing {filteredParcels.length} of {pagination.totalElements} parcel(s)
                                     {backgroundLoading && (
-                                        <span className="inline-flex items-center gap-1.5 text-[#ea690c]">
+                                    <span className="inline-flex items-center gap-1.5 text-[#007bff]">
                                             <Loader className="w-4 h-4 animate-spin" />
                                             Loading next page...
                                         </span>
@@ -665,7 +665,7 @@ export const ParcelSearch = (): JSX.Element => {
                                                                         }}
                                                                         variant="outline"
                                                                         size="sm"
-                                                                        className="border border-[#ea690c] text-[#ea690c] hover:bg-orange-50 h-7 px-2 text-xs"
+                                                                        className="border border-[#007bff] text-[#007bff] hover:bg-blue-50 h-7 px-2 text-xs"
                                                                     >
                                                                         <Eye className="w-3 h-3 mr-1" />
                                                                         <span className="hidden sm:inline">View</span>
@@ -791,7 +791,7 @@ export const ParcelSearch = (): JSX.Element => {
                                     <select
                                         value={newShelfLocation}
                                         onChange={(e) => setNewShelfLocation(e.target.value)}
-                                        className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c]"
+                                        className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff]"
                                     >
                                         <option value="">Select a shelf</option>
                                         {shelves.map((s) => (
@@ -816,7 +816,7 @@ export const ParcelSearch = (): JSX.Element => {
                                     <Button
                                         onClick={handleUpdateShelf}
                                         disabled={!newShelfLocation}
-                                        className="flex-1 bg-[#ea690c] text-white hover:bg-[#ea690c]/90"
+                                        className="flex-1 bg-[#007bff] text-white hover:bg-[#007bff]/90"
                                     >
                                         Update Shelf
                                     </Button>
@@ -982,10 +982,10 @@ export const ParcelSearch = (): JSX.Element => {
                                 <div>
                                     <h4 className="text-sm font-semibold text-neutral-800 mb-3 pb-2 border-b border-[#d1d1d1]">Costs</h4>
                                     <div className="grid grid-cols-2 gap-4">
-                                        {selectedParcel.pickUpCost !== undefined && (
+                                                {selectedParcel.pickUpCost !== undefined && (
                                             <div>
                                                 <p className="text-xs text-[#5d5d5d] mb-1">Pick Up Cost</p>
-                                                <p className="font-semibold text-[#ea690c] text-sm">
+                                                <p className="font-semibold text-[#007bff] text-sm">
                                                     GHC {selectedParcel.pickUpCost.toFixed(2)}
                                                 </p>
                                             </div>
@@ -993,7 +993,7 @@ export const ParcelSearch = (): JSX.Element => {
                                         {selectedParcel.deliveryCost !== undefined && (
                                             <div>
                                                 <p className="text-xs text-[#5d5d5d] mb-1">Delivery Cost</p>
-                                                <p className="font-semibold text-[#ea690c] text-sm">
+                                                <p className="font-semibold text-[#007bff] text-sm">
                                                     GHC {selectedParcel.deliveryCost.toFixed(2)}
                                                 </p>
                                             </div>
@@ -1001,7 +1001,7 @@ export const ParcelSearch = (): JSX.Element => {
                                         {selectedParcel.inboundCost !== undefined && (
                                             <div>
                                                 <p className="text-xs text-[#5d5d5d] mb-1">Inbound Cost</p>
-                                                <p className="font-semibold text-[#ea690c] text-sm">
+                                                <p className="font-semibold text-[#007bff] text-sm">
                                                     GHC {selectedParcel.inboundCost.toFixed(2)}
                                                 </p>
                                             </div>
@@ -1009,7 +1009,7 @@ export const ParcelSearch = (): JSX.Element => {
                                         {selectedParcel.storageCost !== undefined && (
                                             <div>
                                                 <p className="text-xs text-[#5d5d5d] mb-1">Storage Cost</p>
-                                                <p className="font-semibold text-[#ea690c] text-sm">
+                                                <p className="font-semibold text-[#007bff] text-sm">
                                                     GHC {selectedParcel.storageCost.toFixed(2)}
                                                 </p>
                                             </div>
@@ -1093,7 +1093,7 @@ export const ParcelSearch = (): JSX.Element => {
                                             <Button
                                                 onClick={handleMarkPickedUp}
                                                 disabled={markPickupLoading}
-                                                className="bg-[#ea690c] text-white hover:bg-[#ea690c]/90"
+                                                className="bg-[#007bff] text-white hover:bg-[#007bff]/90"
                                             >
                                                 {markPickupLoading ? "Updating..." : "Mark Picked Up"}
                                             </Button>
@@ -1107,7 +1107,7 @@ export const ParcelSearch = (): JSX.Element => {
                                             setEditingShelf(true);
                                         }}
                                         variant="outline"
-                                        className="flex-1 border border-[#ea690c] text-[#ea690c] hover:bg-orange-50"
+                                        className="flex-1 border border-[#007bff] text-[#007bff] hover:bg-blue-50"
                                     >
                                         <Edit className="w-4 h-4 mr-2" />
                                         Update Shelf Location

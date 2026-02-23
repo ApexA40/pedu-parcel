@@ -208,7 +208,7 @@ export const AdminReconciliation = (): JSX.Element => {
                     <select
                       value={selectedOfficeId}
                       onChange={(e) => setSelectedOfficeId(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#ea690c] text-sm bg-white"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#007bff] text-sm bg-white"
                     >
                       <option value="">Select office</option>
                       {stations.map((s) => (
@@ -234,7 +234,7 @@ export const AdminReconciliation = (): JSX.Element => {
                         d.setHours(0, 0, 0, 0);
                         setSelectedDate(d);
                       }}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#ea690c] text-sm"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#007bff] text-sm"
                     />
                   </div>
                 </div>
@@ -301,7 +301,7 @@ export const AdminReconciliation = (): JSX.Element => {
                 <div className="grid grid-cols-3 gap-2 sm:gap-3">
                   <div>
                     <p className="text-xs text-gray-600 mb-0.5">Total Riders</p>
-                    <p className="text-base font-bold text-[#ea690c]">
+                    <p className="text-base font-bold text-[#007bff]">
                       {riderGroups.length}
                     </p>
                   </div>
@@ -329,7 +329,7 @@ export const AdminReconciliation = (): JSX.Element => {
             <CardContent className="p-0">
               {loading ? (
                 <div className="text-center py-12">
-                  <Loader className="w-10 h-10 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                  <Loader className="w-10 h-10 text-[#007bff] mx-auto mb-4 animate-spin" />
                   <p className="text-neutral-700 font-semibold text-lg">
                     Loading reconciliations...
                   </p>
@@ -427,7 +427,7 @@ export const AdminReconciliation = (): JSX.Element => {
                                 </div>
                               </td>
                               <td className="px-4 py-4 whitespace-nowrap border-r border-gray-100">
-                                <div className="text-sm font-bold text-[#ea690c]">
+                                <div className="text-sm font-bold text-[#007bff]">
                                   {formatCurrency(group.totalDeliveredAmount)}
                                 </div>
                               </td>
@@ -526,7 +526,7 @@ export const AdminReconciliation = (): JSX.Element => {
                                                 </div>
                                               </td>
                                               <td className="px-4 py-3 whitespace-nowrap">
-                                                <div className="text-sm font-bold text-[#ea690c]">
+                                                <div className="text-sm font-bold text-[#007bff]">
                                                   {formatCurrency(
                                                     parcel.parcelAmount
                                                   )}

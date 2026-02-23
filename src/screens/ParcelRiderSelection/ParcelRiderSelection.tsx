@@ -113,8 +113,8 @@ export const ParcelRiderSelection = (): JSX.Element => {
           <Card className="w-full rounded-2xl border border-[#d1d1d1] bg-white shadow-[0px_2px_4px_#0000000d,0px_8px_8px_#0000000a,0px_17px_10px_#00000008,0px_30px_12px_#00000003,0px_47px_13px_transparent]">
             <CardContent className="flex flex-col gap-6 p-4 sm:p-6">
               <header className="inline-flex items-center gap-2">
-                <UserIcon className="w-6 h-6 text-[#ea690c]" />
-                <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
+                <UserIcon className="w-6 h-6 text-[#007bff]" />
+                <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#007bff] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
                   Parcel Rider Selection
                 </h1>
               </header>
@@ -126,7 +126,7 @@ export const ParcelRiderSelection = (): JSX.Element => {
 
                 {loadingRiders ? (
                   <div className="text-center py-8">
-                    <Loader className="w-12 h-12 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                    <Loader className="w-12 h-12 text-[#007bff] mx-auto mb-4 animate-spin" />
                     <p className="text-neutral-700 font-medium">Loading riders...</p>
                   </div>
                 ) : riders.length === 0 ? (
@@ -145,13 +145,13 @@ export const ParcelRiderSelection = (): JSX.Element => {
                         const riderName = rider.name || rider.email || "Unknown";
 
                         return (
-                          <div
-                            key={rider.userId}
-                            onClick={() => setSelectedRider(rider.userId)}
-                            className={`flex flex-col gap-4 p-4 rounded-lg border cursor-pointer transition-colors ${isSelected
-                                ? "border-[#ea690c] bg-orange-50"
-                                : "border-[#d1d1d1] bg-white hover:bg-gray-50"
-                              }`}
+                            <div
+                          key={rider.userId}
+                          onClick={() => setSelectedRider(rider.userId)}
+                          className={`flex flex-col gap-4 p-4 rounded-lg border cursor-pointer transition-colors ${isSelected
+                              ? "border-[#007bff] bg-blue-50"
+                              : "border-[#d1d1d1] bg-white hover:bg-gray-50"
+                            }`}
                           >
                             <div className="flex items-start justify-between">
                               <div className="flex items-center gap-3">
@@ -178,7 +178,7 @@ export const ParcelRiderSelection = (): JSX.Element => {
                               </div>
 
                               {isSelected && (
-                                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#ea690c]">
+                                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#007bff]">
                                   <CheckIcon className="w-4 h-4 text-white" />
                                 </div>
                               )}
@@ -190,7 +190,7 @@ export const ParcelRiderSelection = (): JSX.Element => {
                                   <PhoneIcon className="w-4 h-4 text-[#5d5d5d]" />
                                   <a
                                     href={`tel:${rider.phoneNumber}`}
-                                    className="[font-family:'Lato',Helvetica] font-normal text-neutral-700 text-sm hover:text-[#ea690c]"
+                                    className="[font-family:'Lato',Helvetica] font-normal text-neutral-700 text-sm hover:text-[#007bff]"
                                   >
                                     {formatPhoneNumber(rider.phoneNumber)}
                                   </a>
@@ -230,7 +230,7 @@ export const ParcelRiderSelection = (): JSX.Element => {
                         <Button
                           onClick={handleAssign}
                           disabled={isAssigning}
-                          className="flex items-center justify-center gap-3 rounded bg-[#ea690c] px-6 py-3 hover:bg-[#ea690c]/90 disabled:opacity-50"
+                          className="flex items-center justify-center gap-3 rounded bg-[#007bff] px-6 py-3 hover:bg-[#007bff]/90 disabled:opacity-50"
                         >
                           <span className="font-body-md-semibold font-[number:var(--body-md-semibold-font-weight)] text-white text-[length:var(--body-md-semibold-font-size)] tracking-[var(--body-md-semibold-letter-spacing)] leading-[var(--body-md-semibold-line-height)] [font-style:var(--body-md-semibold-font-style)]">
                             {isAssigning

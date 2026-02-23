@@ -439,9 +439,9 @@ export const RiderDashboard = (): JSX.Element => {
                             <div className="flex items-center justify-between">
                                 <div className="min-w-0 flex-1">
                                     <p className="text-xs text-gray-600 mb-1">Total Amount to Collect</p>
-                                    <p className="text-xl sm:text-2xl font-bold text-[#ea690c] truncate">{formatCurrency(totalAmountToCollect)}</p>
+                                    <p className="text-xl sm:text-2xl font-bold text-[#007bff] truncate">{formatCurrency(totalAmountToCollect)}</p>
                                 </div>
-                                <DollarSignIcon className="w-6 h-6 sm:w-8 sm:h-8 text-[#ea690c] opacity-50 flex-shrink-0 ml-2" />
+                                <DollarSignIcon className="w-6 h-6 sm:w-8 sm:h-8 text-[#007bff] opacity-50 flex-shrink-0 ml-2" />
                             </div>
                         </CardContent>
                     </Card>
@@ -456,13 +456,13 @@ export const RiderDashboard = (): JSX.Element => {
                                 <Button
                                     onClick={handleDownloadPDF}
                                     variant="outline"
-                                    className="border-[#ea690c] text-[#ea690c] hover:bg-orange-50 flex items-center gap-2"
+                                    className="border-[#007bff] text-[#007bff] hover:bg-blue-50 flex items-center gap-2"
                                 >
                                     <Download className="w-4 h-4" />
                                     Download
                                 </Button>
                             )}
-                            {/* <Badge className="bg-[#ea690c] text-white px-3 py-1 font-semibold">
+                            {/* <Badge className="bg-[#007bff] text-white px-3 py-1 font-semibold">
                                 {activeAssignments.length} {activeAssignments.length === 1 ? 'Parcel' : 'Parcels'}
                             </Badge> */}
                         </div>
@@ -471,7 +471,7 @@ export const RiderDashboard = (): JSX.Element => {
                     {loading ? (
                         <Card className="rounded-xl border-0 bg-white shadow-lg">
                             <CardContent className="p-12 text-center">
-                                <Loader className="w-10 h-10 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                                <Loader className="w-10 h-10 text-[#007bff] mx-auto mb-4 animate-spin" />
                                 <p className="text-neutral-700 font-semibold text-lg">Loading assignments...</p>
                                 <p className="text-sm text-gray-500 mt-2">Please wait</p>
                             </CardContent>
@@ -528,7 +528,7 @@ export const RiderDashboard = (): JSX.Element => {
                                                         {parcel.recieverPhoneNumber ? (
                                                             <a
                                                                 href={`tel:${parcel.recieverPhoneNumber}`}
-                                                                className="text-sm text-[#ea690c] hover:underline font-medium"
+                                                                className="text-sm text-[#007bff] hover:underline font-medium"
                                                             >
                                                                 {formatPhoneNumber(parcel.recieverPhoneNumber)}
                                                             </a>
@@ -551,7 +551,7 @@ export const RiderDashboard = (): JSX.Element => {
                                                         </div>
                                                     </td>
                                                     <td className="px-4 py-4 whitespace-nowrap border-r border-gray-100">
-                                                        <div className="text-sm font-bold text-[#ea690c]">
+                                                        <div className="text-sm font-bold text-[#007bff]">
                                                             {formatCurrency(totalAmount)}
                                                         </div>
                                                     </td>
@@ -689,7 +689,7 @@ export const RiderDashboard = (): JSX.Element => {
 
                                 <div className="bg-gray-50 rounded-lg p-3">
                                     <p className="text-xs font-semibold text-[#5d5d5d] mb-2">Expected Amount</p>
-                                    <p className="text-xl sm:text-2xl font-bold text-[#ea690c]">
+                                    <p className="text-xl sm:text-2xl font-bold text-[#007bff]">
                                         {formatCurrency(
                                             (selectedAssignment.parcel.deliveryCost || 0) + (selectedAssignment.parcel.pickUpCost || 0) +
                                             (selectedAssignment.parcel.inboundCost || 0) + (selectedAssignment.parcel.storageCost || 0)
@@ -717,7 +717,7 @@ export const RiderDashboard = (): JSX.Element => {
                                     <select
                                         value={paymentMethod}
                                         onChange={(e) => setPaymentMethod(e.target.value)}
-                                        className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c] bg-white"
+                                        className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff] bg-white"
                                     >
                                         <option value="">Select payment method</option>
                                         <option value="cash">Cash</option>
@@ -826,10 +826,10 @@ export const RiderDashboard = (): JSX.Element => {
                                                 {parcel.recieverPhoneNumber && (
                                                     <div>
                                                         <p className="text-xs text-gray-600 mb-1">Phone</p>
-                                                        <a
-                                                            href={`tel:${parcel.recieverPhoneNumber}`}
-                                                            className="text-sm font-semibold text-[#ea690c] hover:underline"
-                                                        >
+                                                    <a
+                                                        href={`tel:${parcel.recieverPhoneNumber}`}
+                                                        className="text-sm font-semibold text-[#007bff] hover:underline"
+                                                    >
                                                             {formatPhoneNumber(parcel.recieverPhoneNumber)}
                                                         </a>
                                                     </div>
@@ -867,7 +867,7 @@ export const RiderDashboard = (): JSX.Element => {
                                                             <p className="text-xs text-gray-600 mb-1">Phone</p>
                                                             <a
                                                                 href={`tel:${parcel.senderPhoneNumber}`}
-                                                                className="text-sm font-semibold text-[#ea690c] hover:underline"
+                                                                className="text-sm font-semibold text-[#007bff] hover:underline"
                                                             >
                                                                 {formatPhoneNumber(parcel.senderPhoneNumber)}
                                                             </a>
@@ -923,7 +923,7 @@ export const RiderDashboard = (): JSX.Element => {
                                                 )}
                                                 <div className="flex justify-between pt-2 border-t-2 border-orange-200">
                                                     <span className="text-base font-bold text-orange-900">Total:</span>
-                                                    <span className="text-xl font-bold text-[#ea690c]">
+                                                    <span className="text-xl font-bold text-[#007bff]">
                                                         {formatCurrency(totalAmount)}
                                                     </span>
                                                 </div>
@@ -1046,7 +1046,7 @@ export const RiderDashboard = (): JSX.Element => {
                                                 setFailureReason("");
                                             }
                                         }}
-                                        className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c] bg-white"
+                                        className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff] bg-white"
                                     >
                                         <option value="">Select a reason</option>
                                         {failureReasons.map((reason) => (
@@ -1064,7 +1064,7 @@ export const RiderDashboard = (): JSX.Element => {
                                                 value={failureReason}
                                                 onChange={(e) => setFailureReason(e.target.value)}
                                                 placeholder="Enter reason for delivery failure..."
-                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c] resize-none"
+                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff] resize-none"
                                                 rows={4}
                                             />
                                         </div>

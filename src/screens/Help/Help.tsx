@@ -50,8 +50,8 @@ export const Help = (): JSX.Element => {
                                 <Card key={index} className="border border-[#d1d1d1] bg-white">
                                     <CardContent className="p-6">
                                         <div className="flex items-center gap-3 mb-4">
-                                            <div className="p-2 bg-[#ea690c]/10 rounded-lg">
-                                                <Icon className="w-6 h-6 text-[#ea690c]" />
+                                            <div className="p-2 bg-[#007bff]/10 rounded-lg">
+                                                <Icon className="w-6 h-6 text-[#007bff]" />
                                             </div>
                                             <h2 className="text-lg font-bold text-neutral-800">{section.title}</h2>
                                         </div>
@@ -59,7 +59,7 @@ export const Help = (): JSX.Element => {
                                         <ul className="space-y-2">
                                             {section.items.map((item, itemIndex) => (
                                                 <li key={itemIndex} className="text-sm text-neutral-700 flex items-start gap-2">
-                                                    <span className="text-[#ea690c] mt-1">•</span>
+                                                    <span className="text-[#007bff] mt-1">•</span>
                                                     <span>{item}</span>
                                                 </li>
                                             ))}
@@ -73,7 +73,7 @@ export const Help = (): JSX.Element => {
                     <Card className="border border-[#d1d1d1] bg-white">
                         <CardContent className="p-6">
                             <div className="flex items-center gap-3 mb-4">
-                                <HelpCircleIcon className="w-6 h-6 text-[#ea690c]" />
+                                <HelpCircleIcon className="w-6 h-6 text-[#007bff]" />
                                 <h2 className="text-lg font-bold text-neutral-800">Contact Support</h2>
                             </div>
                             <div className="space-y-3">

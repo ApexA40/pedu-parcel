@@ -45,8 +45,8 @@ export const ReviewSection = ({
         <Card className="w-full rounded-2xl border border-[#d1d1d1] bg-white shadow-sm">
             <CardContent className="flex flex-col gap-6 p-4 sm:p-6">
                 <header className="inline-flex items-center gap-2">
-                    <FileCheckIcon className="w-6 h-6 text-[#ea690c]" />
-                    <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-lg-semibold-font-size)]">
+                    <FileCheckIcon className="w-6 h-6 text-[#007bff]" />
+                    <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#007bff] text-[length:var(--body-lg-semibold-font-size)]">
                         Review Bulk Entry
                     </h1>
                 </header>
@@ -125,7 +125,7 @@ export const ReviewSection = ({
                                                 {parcel.shelfLocation}
                                             </span>
                                             {parcel.itemValue && parcel.itemValue > 0 && (
-                                                <span className="text-xs font-semibold text-[#ea690c]">
+                                                <span className="text-xs font-semibold text-[#007bff]">
                                                     GHC {parcel.itemValue.toFixed(2)}
                                                 </span>
                                             )}

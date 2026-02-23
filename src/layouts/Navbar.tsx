@@ -120,6 +120,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
     const navigate = useNavigate();
     const { currentUser, logout } = useStation();
     const [showAccountMenu, setShowAccountMenu] = useState(false);
+    const [showLogoutModal, setShowLogoutModal] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
     const routeInfo = routeTitles[location.pathname] || {
@@ -168,31 +169,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                     </div>
                 </div>
 
-                {/* Right Section - Icons and Account */}
+                {/* Right Section - Account */}
                 <div className="flex items-center gap-1 sm:gap-2 lg:gap-4">
-                    {/* Notifications */}
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="relative h-10 w-10 rounded-lg hover:bg-gray-100 transition-colors"
-                    >
-                        <BellIcon className="h-5 w-5 text-[#5d5d5d]" />
-                        <Badge className="absolute -right-0.5 -top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-[#e22420] px-0 hover:bg-[#e22420]">
-                            <span className="text-white text-[9px] font-bold">
-                                9
-                            </span>
-                        </Badge>
-                    </Button>
-
-                    {/* Settings */}
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="h-10 w-10 rounded-lg hover:bg-gray-100 transition-colors"
-                    >
-                        <SettingsIcon className="h-5 w-5 text-[#5d5d5d]" />
-                    </Button>
-
                     {/* Divider */}
                     <div className="hidden sm:block w-px h-6 bg-[#d1d1d1] mx-1 lg:mx-2" />
 
@@ -282,25 +260,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                                             const Icon = item.icon;
                                             const isActive = location.pathname === item.path;
                                             return (
-                                                <button
-                                                    key={index}
-                                                    onClick={() => {
-                                                        navigate(item.path);
-                                                        setShowAccountMenu(false);
-                                                    }}
-                                                    className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${isActive
-                                                            ? "bg-[#ea690c] text-white shadow-sm"
-                                                            : "text-neutral-700 hover:bg-gray-50"
-                                                        }`}
-                                                >
-                                                    <Icon className={`w-4 h-4 flex-shrink-0 ${isActive ? "text-white" : "text-[#5d5d5d]"}`} />
-                                                    <span className="text-sm font-medium text-left flex-1">
-                                                        {item.label}
-                                                    </span>
-                                                    {isActive && (
-                                                        <div className="w-1.5 h-1.5 rounded-full bg-white" />
-                                                    )}
-                                                </button>
+                                            <button
+                                                key={index}
+                                                onClick={() => {
+                                                navigate(item.path);
+                                                setShowAccountMenu(false);
+                                                }}
+                                                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${isActive
+                                                        ? "bg-[#007bff] text-white shadow-sm"
+                                                        : "text-neutral-700 hover:bg-gray-50"
+                                                    }`}
+                                            >
+                                                <Icon className={`w-4 h-4 flex-shrink-0 ${isActive ? "text-white" : "text-[#5d5d5d]"}`} />
+                                                <span className="text-sm font-medium text-left flex-1">
+                                                    {item.label}
+                                                </span>
+                                                {isActive && (
+                                                <div className="w-1.5 h-1.5 rounded-full bg-white" />
+                                                )}
+                                            </button>
                                             );
                                         })}
                                     </div>
@@ -309,9 +287,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                                     <div className="border-t border-[#d1d1d1] p-2">
                                         <button
                                             onClick={() => {
-                                                logout();
-                                                navigate("/login");
                                                 setShowAccountMenu(false);
+                                                setShowLogoutModal(true);
                                             }}
                                             className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#e22420] hover:bg-red-50 transition-colors"
                                         >
@@ -327,6 +304,36 @@ export const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                     )}
                 </div>
             </div>
+
+            {/* Custom Logout Confirmation Modal */}
+            {showLogoutModal && (
+                <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+                    <div className="w-full max-w-md rounded-lg border border-[#d1d1d1] bg-white shadow-lg p-6">
+                        <h2 className="text-lg font-bold text-neutral-800 mb-2">Confirm Logout</h2>
+                        <p className="text-sm text-[#5d5d5d] mb-4">
+                            Are you sure you want to logout from your Pedu Junction Parcel account?
+                        </p>
+                        <div className="flex gap-3 justify-end">
+                            <Button
+                                variant="outline"
+                                className="border border-[#d1d1d1]"
+                                onClick={() => setShowLogoutModal(false)}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                className="bg-[#e22420] text-white hover:bg-red-600"
+                                onClick={() => {
+                                    logout();
+                                    navigate("/login");
+                                }}
+                            >
+                                Logout
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };

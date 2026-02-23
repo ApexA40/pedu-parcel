@@ -523,7 +523,7 @@ export const ActiveDeliveries = (): JSX.Element => {
                     <XIcon className="w-4 h-4" />
                   </button>
                 )}
-                <SearchIcon className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#ea690c]" />
+                <SearchIcon className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#007bff]" />
               </div>
 
               <div className="flex items-center gap-2">
@@ -531,7 +531,7 @@ export const ActiveDeliveries = (): JSX.Element => {
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value as UIStatus | "all")}
-                  className="rounded border border-[#d1d1d1] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#ea690c]"
+                  className="rounded border border-[#d1d1d1] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#007bff]"
                 >
                   <option value="all">All Status</option>
                   <option value="assigned">Assigned</option>
@@ -547,7 +547,7 @@ export const ActiveDeliveries = (): JSX.Element => {
             {loading ? (
               <Card className="rounded-lg border border-[#d1d1d1] bg-white shadow-sm">
                 <CardContent className="p-12 text-center">
-                  <Loader className="w-8 h-8 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                  <Loader className="w-8 h-8 text-[#007bff] mx-auto mb-4 animate-spin" />
                   <p className="text-neutral-700 font-medium">Loading riders and assignments...</p>
                 </CardContent>
               </Card>
@@ -736,7 +736,7 @@ export const ActiveDeliveries = (): JSX.Element => {
                                             )}
                                             <div className="flex justify-between pt-1 border-t border-[#d1d1d1]">
                                               <span className="text-sm font-bold text-neutral-800">Total:</span>
-                                              <span className="text-lg font-bold text-[#ea690c]">
+                                              <span className="text-lg font-bold text-[#007bff]">
                                                 {formatCurrency(totalAmount)}
                                               </span>
                                             </div>
@@ -865,7 +865,7 @@ export const ActiveDeliveries = (): JSX.Element => {
 
                 <div className="bg-gray-50 rounded-lg p-3">
                   <p className="text-xs font-semibold text-[#5d5d5d] mb-2">Expected Amount</p>
-                  <p className="text-2xl font-bold text-[#ea690c]">
+                  <p className="text-2xl font-bold text-[#007bff]">
                     {formatCurrency(
                       (selectedDelivery.parcel.deliveryCost || 0) + (selectedDelivery.parcel.pickUpCost || 0) +
                       (selectedDelivery.parcel.inboundCost || 0) + (selectedDelivery.parcel.storageCost || 0)

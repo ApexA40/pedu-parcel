@@ -722,7 +722,7 @@ export const ParcelRegistration = (): JSX.Element => {
                   </Button>
                   <Button
                     onClick={handleSaveAndLeave}
-                    className="flex-1 bg-[#ea690c] text-white hover:bg-[#ea690c]/90"
+                    className="flex-1 bg-[#007bff] text-white hover:bg-[#007bff]/90"
                   >
                     Save & Leave
                   </Button>

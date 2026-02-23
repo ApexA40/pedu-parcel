@@ -17,8 +17,8 @@ export const ReconciliationConfirmation = (): JSX.Element => {
           <Card className="w-full max-w-2xl rounded-2xl border border-[#d1d1d1] bg-white shadow-[0px_2px_4px_#0000000d,0px_8px_8px_#0000000a,0px_17px_10px_#00000008,0px_30px_12px_#00000003,0px_47px_13px_transparent]">
             <CardContent className="flex flex-col gap-6 p-6 sm:p-8">
               <header className="inline-flex items-center gap-2">
-                <DollarSignIcon className="w-6 h-6 text-[#ea690c]" />
-                <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
+                <DollarSignIcon className="w-6 h-6 text-[#007bff]" />
+                <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#007bff] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
                   Reconciliation Confirmation
                 </h1>
               </header>
@@ -86,7 +86,7 @@ export const ReconciliationConfirmation = (): JSX.Element => {
                     <span className="[font-family:'Lato',Helvetica] font-bold text-neutral-800 text-base">
                       Net Amount
                     </span>
-                    <span className="[font-family:'Lato',Helvetica] font-bold text-[#ea690c] text-lg">
+                    <span className="[font-family:'Lato',Helvetica] font-bold text-[#007bff] text-lg">
                       GHC 117.00
                     </span>
                   </div>
@@ -94,7 +94,7 @@ export const ReconciliationConfirmation = (): JSX.Element => {
               </div>
 
               <div className="flex justify-end pt-4">
-                <Button className="flex items-center justify-center gap-3 rounded bg-[#ea690c] px-6 py-3 hover:bg-[#ea690c]/90">
+                <Button className="flex items-center justify-center gap-3 rounded bg-[#007bff] px-6 py-3 hover:bg-[#007bff]/90">
                   <CheckCircleIcon className="w-5 h-5" />
                   <span className="font-body-md-semibold font-[number:var(--body-md-semibold-font-weight)] text-white text-[length:var(--body-md-semibold-font-size)] tracking-[var(--body-md-semibold-letter-spacing)] leading-[var(--body-md-semibold-line-height)] [font-style:var(--body-md-semibold-font-style)]">
                     Confirm

@@ -37,7 +37,7 @@ export const ParcelSMSSuccess = (): JSX.Element => {
                 </div>
               </div>
 
-              <Button className="flex w-full items-center justify-center gap-3 rounded bg-[#ea690c] px-6 py-3 hover:bg-[#ea690c]/90">
+              <Button className="flex w-full items-center justify-center gap-3 rounded bg-[#007bff] px-6 py-3 hover:bg-[#007bff]/90">
                 <HomeIcon className="w-5 h-5" />
                 <span className="font-body-md-semibold font-[number:var(--body-md-semibold-font-weight)] text-white text-[length:var(--body-md-semibold-font-size)] tracking-[var(--body-md-semibold-letter-spacing)] leading-[var(--body-md-semibold-line-height)] [font-style:var(--body-md-semibold-font-style)]">
                   Return to Dashboard

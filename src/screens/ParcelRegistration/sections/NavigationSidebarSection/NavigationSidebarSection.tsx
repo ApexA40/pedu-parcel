@@ -49,7 +49,7 @@ export const NavigationSidebarSection = (): JSX.Element => {
           />
 
           <div className="flex flex-wrap items-center justify-center gap-2 text-center">
-            <div className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
+            <div className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#007bff] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
               Mealex &amp; Mailex
             </div>
 
@@ -71,7 +71,7 @@ export const NavigationSidebarSection = (): JSX.Element => {
               className={({ isActive }) =>
                 `flex items-center justify-start gap-3 rounded-xl px-4 py-3 text-left shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-colors ${
                   isActive
-                    ? "bg-[#ea690c] text-white hover:bg-[#ea690c]/90"
+                    ? "bg-[#007bff] text-white hover:bg-[#007bff]/90"
                     : "border border-transparent hover:border-[#f0f0f0] hover:bg-gray-50"
                 }`
               }
