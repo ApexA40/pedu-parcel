@@ -303,7 +303,7 @@ export const Reconciliation = (): JSX.Element => {
             onClick={() => setView("reconcile")}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
               view === "reconcile"
-                ? "bg-[#ea690c] text-white"
+                ? "bg-[#007bff] text-white"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -314,7 +314,7 @@ export const Reconciliation = (): JSX.Element => {
             onClick={() => setView("history")}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
               view === "history"
-                ? "bg-[#ea690c] text-white"
+                ? "bg-[#007bff] text-white"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -334,7 +334,7 @@ export const Reconciliation = (): JSX.Element => {
               <p className="text-sm text-gray-600">Approve and reconcile delivered assignments</p>
             </div> */}
             {selectedRiders.size > 0 && (
-              <Badge className="bg-orange-100 text-orange-700 border-orange-200 px-4 py-2 text-base font-semibold">
+              <Badge className="bg-blue-100 text-blue-800 border-blue-200 px-4 py-2 text-base font-semibold">
                 {selectedRiders.size} Rider{selectedRiders.size !== 1 ? 's' : ''} Selected
               </Badge>
             )}
@@ -348,7 +348,7 @@ export const Reconciliation = (): JSX.Element => {
                   <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Riders Selected</p>
-                      <p className="text-2xl font-bold text-[#ea690c]">{selectedRiders.size}</p>
+                      <p className="text-2xl font-bold text-[#007bff]">{selectedRiders.size}</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Delivered Parcels</p>
@@ -386,7 +386,7 @@ export const Reconciliation = (): JSX.Element => {
             <CardContent className="p-0">
               {loading ? (
                 <div className="text-center py-12">
-                  <Loader className="w-10 h-10 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                  <Loader className="w-10 h-10 text-[#007bff] mx-auto mb-4 animate-spin" />
                   <p className="text-neutral-700 font-semibold text-lg">Loading assignments...</p>
                 </div>
               ) : riderGroups.length === 0 ? (
@@ -407,7 +407,7 @@ export const Reconciliation = (): JSX.Element => {
                             type="checkbox"
                             checked={selectedRiders.size === riderGroups.length && riderGroups.length > 0}
                             onChange={handleSelectAll}
-                            className="rounded border-gray-300 text-[#ea690c] focus:ring-[#ea690c]"
+                            className="rounded border-gray-300 text-[#007bff] focus:ring-[#007bff]"
                           />
                         </th>
                         <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-b-2 border-gray-300">Rider</th>
@@ -435,7 +435,7 @@ export const Reconciliation = (): JSX.Element => {
                                   type="checkbox"
                                   checked={isSelected}
                                   onChange={() => handleToggleRiderSelection(group.assignmentId)}
-                                  className="rounded border-gray-300 text-[#ea690c] focus:ring-[#ea690c]"
+                                  className="rounded border-gray-300 text-[#007bff] focus:ring-[#007bff]"
                                 />
                               </td>
                               <td className="px-4 py-4 border-r border-gray-100">
@@ -472,12 +472,12 @@ export const Reconciliation = (): JSX.Element => {
                                 <div className="text-xs text-gray-500">Delivered / Total</div>
                               </td>
                               <td className="px-4 py-4 whitespace-nowrap border-r border-gray-100">
-                                <div className="text-sm font-bold text-[#ea690c]">
+                                <div className="text-sm font-bold text-[#007bff]">
                                   {formatCurrency(group.amount)}
                                 </div>
                               </td>
                               <td className="px-4 py-4 whitespace-nowrap border-r border-gray-100">
-                                <div className="text-sm font-bold text-[#ea690c]">
+                                <div className="text-sm font-bold text-[#007bff]">
                                   {formatCurrency(group.totalDeliveredAmount)}
                                 </div>
                               </td>
@@ -552,7 +552,7 @@ export const Reconciliation = (): JSX.Element => {
                                               </div>
                                             </td>
                                             <td className="px-4 py-3 whitespace-nowrap">
-                                              <div className="text-sm font-bold text-[#ea690c]">
+                                              <div className="text-sm font-bold text-[#007bff]">
                                                 {formatCurrency(parcel.parcelAmount)}
                                               </div>
                                             </td>

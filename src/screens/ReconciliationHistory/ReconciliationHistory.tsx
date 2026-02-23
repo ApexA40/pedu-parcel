@@ -251,7 +251,7 @@ export const ReconciliationHistory = ({ embedded = false }: ReconciliationHistor
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Total Riders</p>
-                    <p className="text-2xl font-bold text-[#ea690c]">{riderGroups.length}</p>
+                    <p className="text-2xl font-bold text-[#007bff]">{riderGroups.length}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">Delivered Parcels</p>
@@ -271,7 +271,7 @@ export const ReconciliationHistory = ({ embedded = false }: ReconciliationHistor
             <CardContent className="p-0">
               {loading ? (
                 <div className="text-center py-12">
-                  <Loader className="w-10 h-10 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                  <Loader className="w-10 h-10 text-[#007bff] mx-auto mb-4 animate-spin" />
                   <p className="text-neutral-700 font-semibold text-lg">Loading reconciliation history...</p>
                 </div>
               ) : riderGroups.length === 0 ? (
@@ -338,7 +338,7 @@ export const ReconciliationHistory = ({ embedded = false }: ReconciliationHistor
                                 <div className="text-xs text-gray-500">Delivered / Total</div>
                               </td>
                               <td className="px-4 py-4 whitespace-nowrap border-r border-gray-100">
-                                <div className="text-sm font-bold text-[#ea690c]">
+                                <div className="text-sm font-bold text-[#007bff]">
                                   {formatCurrency(group.totalDeliveredAmount)}
                                 </div>
                               </td>
@@ -407,7 +407,7 @@ export const ReconciliationHistory = ({ embedded = false }: ReconciliationHistor
                                               </div>
                                             </td>
                                             <td className="px-4 py-3 whitespace-nowrap">
-                                              <div className="text-sm font-bold text-[#ea690c]">
+                                              <div className="text-sm font-bold text-[#007bff]">
                                                 {formatCurrency(parcel.parcelAmount)}
                                               </div>
                                             </td>

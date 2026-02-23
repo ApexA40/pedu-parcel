@@ -44,7 +44,7 @@ const ParcelCard = ({ parcel, isSelected, onToggle }: ParcelCardProps) => {
 
     return (
         <Card
-            className={`rounded-lg border-2 bg-white shadow-sm hover:shadow-md transition-shadow ${isSelected ? "border-[#ea690c]" : "border-[#d1d1d1]"
+            className={`rounded-lg border-2 bg-white shadow-sm hover:shadow-md transition-shadow ${isSelected ? "border-[#007bff]" : "border-[#d1d1d1]"
                 }`}
         >
             <CardContent className="p-4">
@@ -57,7 +57,7 @@ const ParcelCard = ({ parcel, isSelected, onToggle }: ParcelCardProps) => {
                                     onToggle();
                                 }}
                                 className={`flex items-center justify-center w-5 h-5 rounded border-2 transition-colors ${isSelected
-                                    ? "border-[#ea690c] bg-[#ea690c]"
+                                    ? "border-[#007bff] bg-[#007bff]"
                                     : "border-[#d1d1d1] bg-white"
                                     }`}
                             >
@@ -115,11 +115,11 @@ const ParcelCard = ({ parcel, isSelected, onToggle }: ParcelCardProps) => {
                             <div className="flex items-center gap-2">
                                 <UserIcon className="w-4 h-4 text-[#5d5d5d]" />
                                 <div className="[font-family:'Lato',Helvetica] font-normal text-sm">
-                                    <div className="text-[#ea690c]">
-                                        Rider: <strong className="font-semibold text-[#ea690c]">{parcel.riderInfo.riderName}</strong>
+                                    <div className="text-[#007bff]">
+                                        Rider: <strong className="font-semibold text-[#007bff]">{parcel.riderInfo.riderName}</strong>
                                     </div>
                                     {parcel.riderInfo.riderPhoneNumber && (
-                                        <div className="text-[12px] text-[#ea690c]">
+                                        <div className="text-[12px] text-[#007bff]">
                                             {formatPhoneNumber(parcel.riderInfo.riderPhoneNumber)}
                                         </div>
                                     )}
@@ -129,7 +129,7 @@ const ParcelCard = ({ parcel, isSelected, onToggle }: ParcelCardProps) => {
 
                         <div className="flex items-center gap-2 mt-1">
                             <span className="[font-family:'Lato',Helvetica] font-semibold text-neutral-800 text-sm">
-                                Amount to collect: <span className="text-[#ea690c]">{formatCurrency(totalAmount)}</span>
+                                Amount to collect: <span className="text-[#007bff]">{formatCurrency(totalAmount)}</span>
                             </span>
                         </div>
                     </div>
@@ -298,13 +298,13 @@ export const ParcelSelection = (): JSX.Element => {
                                 <div className="flex items-center gap-2">
                                     <button
                                         onClick={() => { setFilterMode('ready'); setSelectedParcels(new Set()); }}
-                                        className={`px-3 py-1 rounded ${filterMode === 'ready' ? 'bg-[#ea690c] text-white' : 'bg-white border border-[#d1d1d1] text-neutral-700'}`}
+                                        className={`px-3 py-1 rounded ${filterMode === 'ready' ? 'bg-[#007bff] text-white' : 'bg-white border border-[#d1d1d1] text-neutral-700'}`}
                                     >
                                         Ready
                                     </button>
                                     <button
                                         onClick={() => { setFilterMode('assigned'); setSelectedParcels(new Set()); }}
-                                        className={`px-3 py-1 rounded ${filterMode === 'assigned' ? 'bg-[#ea690c] text-white' : 'bg-white border border-[#d1d1d1] text-neutral-700'}`}
+                                        className={`px-3 py-1 rounded ${filterMode === 'assigned' ? 'bg-[#007bff] text-white' : 'bg-white border border-[#d1d1d1] text-neutral-700'}`}
                                     >
                                         Assigned
                                     </button>
@@ -335,7 +335,7 @@ export const ParcelSelection = (): JSX.Element => {
                             <Button
                                 onClick={handleAssign}
                                 disabled={selectedParcels.size === 0}
-                                className="w-full sm:w-auto bg-[#ea690c] text-white hover:bg-[#ea690c]/90 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full sm:w-auto bg-[#007bff] text-white hover:bg-[#007bff]/90 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 Continue to Rider Selection ({selectedParcels.size})
                             </Button>
@@ -424,10 +424,10 @@ export const ParcelSelection = (): JSX.Element => {
                                 </p>
 
                                 {loadingRiders ? (
-                                    <div className="text-center py-8">
-                                        <Loader className="w-12 h-12 text-[#ea690c] mx-auto mb-4 animate-spin" />
-                                        <p className="text-neutral-700 font-medium">Loading riders...</p>
-                                    </div>
+                                <div className="text-center py-8">
+                                    <Loader className="w-12 h-12 text-[#007bff] mx-auto mb-4 animate-spin" />
+                                    <p className="text-neutral-700 font-medium">Loading riders...</p>
+                                </div>
                                 ) : riders.length === 0 ? (
                                     <div className="text-center py-8">
                                         <AlertCircleIcon className="w-12 h-12 text-[#9a9a9a] mx-auto mb-4 opacity-50" />
@@ -444,14 +444,14 @@ export const ParcelSelection = (): JSX.Element => {
                                                 const riderName = rider.name || rider.email || "Unknown";
 
                                                 return (
-                                                    <div
+                                                        <div
                                                         key={rider.userId}
                                                         onClick={() => setSelectedRider(rider.userId)}
                                                         className={`flex flex-col gap-4 p-4 rounded-lg border cursor-pointer transition-colors ${isSelected
-                                                            ? "border-[#ea690c] bg-orange-50"
+                                                            ? "border-[#007bff] bg-blue-50"
                                                             : "border-[#d1d1d1] bg-white hover:bg-gray-50"
                                                             }`}
-                                                    >
+                                                        >
                                                         <div className="flex items-start justify-between">
                                                             <div className="flex items-center gap-3">
                                                                 <Avatar className="h-12 w-12 border border-solid border-[#d1d1d1]">
@@ -477,7 +477,7 @@ export const ParcelSelection = (): JSX.Element => {
                                                             </div>
 
                                                             {isSelected && (
-                                                                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#ea690c]">
+                                                                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#007bff]">
                                                                     <CheckIcon className="w-4 h-4 text-white" />
                                                                 </div>
                                                             )}
@@ -489,7 +489,7 @@ export const ParcelSelection = (): JSX.Element => {
                                                                     <PhoneIcon className="w-4 h-4 text-[#5d5d5d]" />
                                                                     <a
                                                                         href={`tel:${rider.phoneNumber}`}
-                                                                        className="[font-family:'Lato',Helvetica] font-normal text-neutral-700 text-sm hover:text-[#ea690c]"
+                                                                        className="[font-family:'Lato',Helvetica] font-normal text-neutral-700 text-sm hover:text-[#007bff]"
                                                                     >
                                                                         {formatPhoneNumber(rider.phoneNumber)}
                                                                     </a>
@@ -538,7 +538,7 @@ export const ParcelSelection = (): JSX.Element => {
                                                 <Button
                                                     onClick={handleAssignToRider}
                                                     disabled={isAssigning}
-                                                    className="bg-[#ea690c] text-white hover:bg-[#ea690c]/90 disabled:opacity-50"
+                                                    className="bg-[#007bff] text-white hover:bg-[#007bff]/90 disabled:opacity-50"
                                                 >
                                                     {isAssigning ? (
                                                         <>

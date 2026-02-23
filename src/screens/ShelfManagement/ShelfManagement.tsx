@@ -222,7 +222,7 @@ export const ShelfManagement = (): JSX.Element => {
                         {canManageShelves && (
                             <Button
                                 onClick={() => setShowAddModal(true)}
-                                className="bg-[#ea690c] text-white hover:bg-[#ea690c]/90 flex items-center gap-2"
+                                className="bg-[#007bff] text-white hover:bg-[#007bff]/90 flex items-center gap-2"
                             >
                                 <Plus size={20} />
                                 Add Shelf
@@ -238,8 +238,8 @@ export const ShelfManagement = (): JSX.Element => {
                                     {/* Modal Header */}
                                     <div className="flex items-center justify-between mb-6">
                                         <div className="flex items-center gap-3">
-                                            <div className="p-2 bg-orange-50 rounded-lg">
-                                                <Plus className="w-5 h-5 text-[#ea690c]" />
+                                            <div className="p-2 bg-blue-50 rounded-lg">
+                                                <Plus className="w-5 h-5 text-[#007bff]" />
                                             </div>
                                             <h2 className="text-lg font-bold text-neutral-800">Add New Shelf</h2>
                                         </div>
@@ -287,7 +287,7 @@ export const ShelfManagement = (): JSX.Element => {
                                         <Button
                                             onClick={handleAddShelf}
                                             disabled={!newShelfName.trim() || adding}
-                                            className="flex-1 bg-[#ea690c] text-white hover:bg-[#ea690c]/90 disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="flex-1 bg-[#007bff] text-white hover:bg-[#007bff]/90 disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
                                             {adding ? (
                                                 <>
@@ -308,7 +308,7 @@ export const ShelfManagement = (): JSX.Element => {
                     {loading ? (
                         <Card className="border border-[#d1d1d1] bg-white">
                             <CardContent className="p-12 text-center">
-                                <Loader className="w-8 h-8 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                                <Loader className="w-8 h-8 text-[#007bff] mx-auto mb-4 animate-spin" />
                                 <p className="text-sm text-neutral-700">Loading shelves...</p>
                             </CardContent>
                         </Card>
@@ -340,8 +340,8 @@ export const ShelfManagement = (): JSX.Element => {
                                         <CardContent className="p-6">
                                             <div className="flex items-start justify-between mb-4">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="p-3 bg-orange-50 rounded-lg">
-                                                        <Package className="w-6 h-6 text-[#ea690c]" />
+                                                    <div className="p-3 bg-blue-50 rounded-lg">
+                                                        <Package className="w-6 h-6 text-[#007bff]" />
                                                     </div>
                                                     <div>
                                                         <h3 className="font-bold text-lg text-neutral-800">{shelf.name}</h3>
@@ -406,7 +406,7 @@ export const ShelfManagement = (): JSX.Element => {
                                                 )}
                                                 {!canDelete && parcelCount > 0 && (
                                                     <div className="mt-3 pt-3 border-t border-[#d1d1d1]">
-                                                        <div className="flex items-center gap-2 text-xs text-orange-600">
+                                                        <div className="flex items-center gap-2 text-xs text-blue-700">
                                                             <AlertCircleIcon className="w-4 h-4" />
                                                             <span>Contains {parcelCount} parcel(s)</span>
                                                         </div>

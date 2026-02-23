@@ -22,8 +22,8 @@ const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
         <div
           className={cn(
             "relative inline-block w-11 h-6 rounded-full transition-colors duration-200 ease-in-out flex-shrink-0",
-            checked ? "bg-[#ea690c]" : "bg-gray-200",
-            "peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-[#ea690c] peer-focus:ring-offset-2",
+            checked ? "bg-[#007bff]" : "bg-gray-200",
+            "peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-[#007bff] peer-focus:ring-offset-2",
             className
           )}
         >

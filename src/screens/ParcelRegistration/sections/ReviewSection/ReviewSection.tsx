@@ -53,8 +53,8 @@ export const ReviewSection = ({
     <Card className="w-full rounded-2xl border border-[#d1d1d1] bg-white shadow-[0px_2px_4px_#0000000d,0px_8px_8px_#0000000a,0px_17px_10px_#00000008,0px_30px_12px_#00000003,0px_47px_13px_transparent]">
       <CardContent className="flex flex-col gap-6 p-4 sm:p-6">
         <header className="inline-flex items-center gap-2">
-          <FileCheckIcon className="w-6 h-6 text-[#ea690c]" />
-          <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
+          <FileCheckIcon className="w-6 h-6 text-[#007bff]" />
+          <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#007bff] text-[length:var(--body-lg-semibold-font-size)] tracking-[var(--body-lg-semibold-letter-spacing)] leading-[var(--body-lg-semibold-line-height)] [font-style:var(--body-lg-semibold-font-style)]">
             Review Parcel #{parcelCount}
           </h1>
         </header>
@@ -139,7 +139,7 @@ export const ReviewSection = ({
                 <span className="[font-family:'Lato',Helvetica] font-bold text-neutral-800 text-base">
                   Total Amount
                 </span>
-                <span className="[font-family:'Lato',Helvetica] font-bold text-[#ea690c] text-lg">
+                <span className="[font-family:'Lato',Helvetica] font-bold text-[#007bff] text-lg">
                   GHC {totalAmount.toFixed(2)}
                 </span>
               </div>
@@ -174,10 +174,10 @@ export const ReviewSection = ({
               <Button
                 variant="outline"
                 onClick={handleSaveAndAddDifferentDriver}
-                className="flex w-full items-center justify-center gap-3 rounded border border-[#ea690c] bg-transparent px-6 py-3 hover:bg-orange-50 sm:w-auto"
+                className="flex w-full items-center justify-center gap-3 rounded border border-[#007bff] bg-transparent px-6 py-3 hover:bg-blue-50 sm:w-auto"
               >
-                <PlusIcon className="w-6 h-6 text-[#ea690c]" />
-                <span className="font-body-md-semibold font-[number:var(--body-md-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-md-semibold-font-size)] tracking-[var(--body-md-semibold-letter-spacing)] leading-[var(--body-md-semibold-line-height)] [font-style:var(--body-md-semibold-font-style)]">
+                <PlusIcon className="w-6 h-6 text-[#007bff]" />
+                <span className="font-body-md-semibold font-[number:var(--body-md-semibold-font-weight)] text-[#007bff] text-[length:var(--body-md-semibold-font-size)] tracking-[var(--body-md-semibold-letter-spacing)] leading-[var(--body-md-semibold-line-height)] [font-style:var(--body-md-semibold-font-style)]">
                   Add Different Driver
                 </span>
               </Button>

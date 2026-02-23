@@ -205,7 +205,7 @@ export const ParcelEdit = (): JSX.Element => {
                         <CardContent className="p-0">
                             {loading ? (
                                 <div className="text-center py-12">
-                                    <Loader className="w-8 h-8 text-[#ea690c] mx-auto mb-4 animate-spin" />
+                                    <Loader className="w-8 h-8 text-[#007bff] mx-auto mb-4 animate-spin" />
                                     <p className="text-sm text-[#5d5d5d]">Loading parcels...</p>
                                 </div>
                             ) : filteredParcels.length === 0 ? (
@@ -269,7 +269,7 @@ export const ParcelEdit = (): JSX.Element => {
                                                             onClick={() => handleSelectParcel(parcel)}
                                                             size="sm"
                                                             variant="outline"
-                                                            className="border border-[#ea690c] text-[#ea690c] hover:bg-orange-50 text-xs h-7 px-3"
+                                                            className="border border-[#007bff] text-[#007bff] hover:bg-blue-50 text-xs h-7 px-3"
                                                         >
                                                             Edit
                                                         </Button>
@@ -343,7 +343,7 @@ export const ParcelEdit = (): JSX.Element => {
                                 {/* Recipient Information */}
                                 <div className="bg-white p-5 rounded-lg border border-[#d1d1d1]">
                                     <div className="flex items-center gap-2 mb-4">
-                                        <User className="w-5 h-5 text-[#ea690c]" />
+                                        <User className="w-5 h-5 text-[#007bff]" />
                                         <h4 className="text-sm font-bold text-neutral-800">Recipient Information</h4>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -453,7 +453,7 @@ export const ParcelEdit = (): JSX.Element => {
                                                 value={formData.parcelDescription}
                                                 onChange={(e) => setFormData({ ...formData, parcelDescription: e.target.value })}
                                                 placeholder="Enter parcel description"
-                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c] resize-none"
+                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff] resize-none"
                                                 rows={3}
                                             />
                                         </div>
@@ -464,7 +464,7 @@ export const ParcelEdit = (): JSX.Element => {
                                             <select
                                                 value={formData.shelfNumber}
                                                 onChange={(e) => setFormData({ ...formData, shelfNumber: e.target.value })}
-                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ea690c]"
+                                                className="w-full px-3 py-2 border border-[#d1d1d1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007bff]"
                                             >
                                                 <option value="">Select shelf</option>
                                                 {shelves.map((shelf) => (
@@ -478,10 +478,10 @@ export const ParcelEdit = (): JSX.Element => {
                                 </div>
 
                                 {/* Costs */}
-                                <div className="bg-orange-50 p-5 rounded-lg border border-orange-200">
+                                <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
                                     <div className="flex items-center gap-2 mb-4">
-                                        <DollarSign className="w-5 h-5 text-[#ea690c]" />
-                                        <h4 className="text-sm font-bold text-orange-900">Costs (GHC)</h4>
+                                        <DollarSign className="w-5 h-5 text-[#007bff]" />
+                                        <h4 className="text-sm font-bold text-blue-900">Costs (GHC)</h4>
                                     </div>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                         <div>
@@ -612,7 +612,7 @@ export const ParcelEdit = (): JSX.Element => {
                                     <Button
                                         onClick={handleSave}
                                         disabled={saving}
-                                        className="flex-1 bg-[#ea690c] text-white hover:bg-[#ea690c]/90 disabled:opacity-50"
+                                        className="flex-1 bg-[#007bff] text-white hover:bg-[#007bff]/90 disabled:opacity-50"
                                     >
                                         {saving ? (
                                             <>

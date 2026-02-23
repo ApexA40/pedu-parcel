@@ -40,7 +40,7 @@ export const ErrorNotificationSection = ({
                 <div
                   className={`flex h-11 w-11 items-center justify-center rounded-full border text-base font-semibold sm:h-12 sm:w-12 ${
                     isActive || isCompleted
-                      ? "border-transparent bg-[#ea690c] text-white"
+                      ? "border-transparent bg-[#007bff] text-white"
                       : "border-[#e7e7e7] bg-[#f7f7f7] text-[#4f4f4f]"
                   }`}
                 >
@@ -61,7 +61,7 @@ export const ErrorNotificationSection = ({
                   <div
                     className={`h-[2px] w-full rounded-full ${
                       isCompleted || (isActive && index === currentStep - 2)
-                        ? "bg-gradient-to-r from-[#ea690c] via-[#f3b07d] to-[#f3b07d] opacity-70"
+                        ? "bg-gradient-to-r from-[#007bff] via-[#5aa8ff] to-[#5aa8ff] opacity-70"
                         : "bg-[#e7e7e7]"
                     }`}
                   />

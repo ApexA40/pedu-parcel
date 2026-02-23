@@ -1,4 +1,4 @@
-import { BellIcon, ChevronDownIcon, SettingsIcon, UserIcon, HelpCircleIcon } from "lucide-react";
+import { ChevronDownIcon, UserIcon, HelpCircleIcon, SettingsIcon } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
@@ -102,23 +102,6 @@ export const HeaderSection = (): JSX.Element => {
       </div>
 
       <div className="inline-flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="relative h-11 w-11 rounded"
-        >
-          <BellIcon className="h-5 w-5 sm:h-6 sm:w-6" />
-          <Badge className="absolute -right-1 -top-1 flex h-5 w-6 items-center justify-center rounded-full bg-[#e22420] px-1.5 hover:bg-[#e22420] min-w-[24px]">
-            <span className="font-body-xs font-[number:var(--body-xs-font-weight)] text-white text-[10px] leading-tight">
-              99+
-            </span>
-          </Badge>
-        </Button>
-
-        <Button variant="ghost" size="icon" className="h-11 w-11 rounded">
-          <SettingsIcon className="h-5 w-5 sm:h-6 sm:w-6" />
-        </Button>
-
         <div className="relative inline-flex items-center gap-3 sm:gap-4" ref={menuRef}>
           <div className="inline-flex items-center gap-2 sm:gap-3">
             <Avatar className="h-10 w-10 border border-solid border-[#d1d1d1] sm:h-[42px] sm:w-[42px]">
@@ -174,7 +157,7 @@ export const HeaderSection = (): JSX.Element => {
                     key={index}
                     className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
                       item.active
-                        ? "bg-[#ea690c] text-white"
+                        ? "bg-[#007bff] text-white"
                         : "text-neutral-700 hover:bg-gray-50"
                     }`}
                   >

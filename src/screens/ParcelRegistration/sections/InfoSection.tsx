@@ -354,7 +354,7 @@ export const InfoSection = ({
                             <Button
                                 onClick={() => onSaveAll()}
                                 disabled={isSaving}
-                                className="bg-[#ea690c] text-white hover:bg-[#ea690c]/90 flex items-center gap-2 disabled:opacity-50"
+                                className="bg-[#007bff] text-white hover:bg-[#007bff]/90 flex items-center gap-2 disabled:opacity-50"
                             >
                                 <Save className="w-4 h-4" />
                                 {isSaving ? "Saving..." : "Save All Parcels"}
@@ -390,7 +390,7 @@ export const InfoSection = ({
                                             {parcel.shelfName || parcel.shelfLocation}
                                         </Badge>
                                         {parcel.itemValue > 0 && (
-                                            <span className="text-xs font-semibold text-[#ea690c]">
+                                        <span className="text-xs font-semibold text-[#007bff]">
                                                 GHC {parcel.itemValue.toFixed(2)}
                                             </span>
                                         )}
@@ -430,7 +430,7 @@ export const InfoSection = ({
                         {/* Driver Information Section */}
                         <div className="space-y-3">
                             <div className="flex items-center gap-2 pb-2 border-b border-[#d1d1d1]">
-                                <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-[#ea690c]" />
+                                <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-[#007bff]" />
                                 <h3 className="font-semibold text-sm sm:text-base text-neutral-800">
                                     Driver Information
                                 </h3>
@@ -489,7 +489,7 @@ export const InfoSection = ({
                                                 }
                                             }}
                                             placeholder="0XXXXXXXXX or XXXXXXXXX"
-                                            className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#ea690c] focus:border-[#ea690c] disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#007bff] focus:border-[#007bff] disabled:opacity-50 disabled:cursor-not-allowed"
                                             maxLength={10}
                                             disabled={isDriverLocked}
                                             required
@@ -520,7 +520,7 @@ export const InfoSection = ({
                         {/* Sender Information Section */}
                         <div className="space-y-3">
                             <div className="flex items-center gap-2 pb-2 border-b border-[#d1d1d1]">
-                                <User className="w-4 h-4 sm:w-5 sm:h-5 text-[#ea690c]" />
+                                <User className="w-4 h-4 sm:w-5 sm:h-5 text-[#007bff]" />
                                 <h3 className="font-semibold text-sm sm:text-base text-neutral-800">
                                     Sender Information
                                 </h3>
@@ -556,7 +556,7 @@ export const InfoSection = ({
                                                 setSenderPhone(normalized);
                                             }}
                                             placeholder="0XXXXXXXXX or XXXXXXXXX"
-                                            className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#ea690c] focus:border-[#ea690c] disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#007bff] focus:border-[#007bff] disabled:opacity-50 disabled:cursor-not-allowed"
                                             maxLength={10}
                                         />
                                     </div>
@@ -567,7 +567,7 @@ export const InfoSection = ({
                         {/* Receiver Information Section */}
                         <div className="space-y-3">
                             <div className="flex items-center gap-2 pb-2 border-b border-[#d1d1d1]">
-                                <Package className="w-4 h-4 sm:w-5 sm:h-5 text-[#ea690c]" />
+                                <Package className="w-4 h-4 sm:w-5 sm:h-5 text-[#007bff]" />
                                 <h3 className="font-semibold text-sm sm:text-base text-neutral-800">
                                     Receiver Information
                                 </h3>
@@ -602,7 +602,7 @@ export const InfoSection = ({
                                                 handlePhoneChange(e.target.value);
                                             }}
                                             placeholder="0XXXXXXXXX or XXXXXXXXX"
-                                            className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#ea690c] focus:border-[#ea690c] disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="pl-14 pr-3 w-full rounded-lg border border-[#d1d1d1] bg-white py-2.5 [font-family:'Lato',Helvetica] font-normal text-neutral-700 placeholder:text-[#b0b0b0] focus:outline-none focus:ring-2 focus:ring-[#007bff] focus:border-[#007bff] disabled:opacity-50 disabled:cursor-not-allowed"
                                             maxLength={10}
                                             required
                                         />
@@ -630,7 +630,7 @@ export const InfoSection = ({
                         {/* Parcel Details Section */}
                         <div className="space-y-3">
                             <div className="flex items-center gap-2 pb-2 border-b border-[#d1d1d1]">
-                                <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-[#ea690c]" />
+                                <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-[#007bff]" />
                                 <h3 className="font-semibold text-sm sm:text-base text-neutral-800">
                                     Parcel Details
                                 </h3>
@@ -665,7 +665,7 @@ export const InfoSection = ({
                                             const selectedShelfId = e.target.value;
                                             setShelf(selectedShelfId);
                                         }}
-                                        className="w-full px-3 py-2 rounded-lg border border-[#d1d1d1] bg-white focus:outline-none focus:ring-2 focus:ring-[#ea690c] focus:border-[#ea690c]"
+                                        className="w-full px-3 py-2 rounded-lg border border-[#d1d1d1] bg-white focus:outline-none focus:ring-2 focus:ring-[#007bff] focus:border-[#007bff]"
                                         required
                                     >
                                         <option value="">Select a shelf</option>
@@ -756,7 +756,7 @@ export const InfoSection = ({
                             <Button
                                 onClick={handleSaveDirectly}
                                 disabled={!isFormValid || isSaving}
-                                className="flex-1 bg-[#ea690c] text-white hover:bg-[#ea690c]/90 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="flex-1 bg-[#007bff] text-white hover:bg-[#007bff]/90 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 <Save className="w-4 h-4" />
                                 {isSaving ? "Saving..." : "Save"}

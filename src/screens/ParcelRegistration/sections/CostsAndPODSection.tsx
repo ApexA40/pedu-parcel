@@ -55,8 +55,8 @@ export const CostsAndPODSection = ({
             <Card className="w-full rounded-2xl border border-[#d1d1d1] bg-white shadow-sm">
                 <CardContent className="flex flex-col gap-6 p-4 sm:p-6">
                     <header className="inline-flex items-center gap-2">
-                        <CalculatorIcon className="w-6 h-6 text-[#ea690c]" />
-                        <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-lg-semibold-font-size)]">
+                        <CalculatorIcon className="w-6 h-6 text-[#007bff]" />
+                        <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#007bff] text-[length:var(--body-lg-semibold-font-size)]">
                             Costs & Payment On Delivery
                         </h1>
                     </header>
@@ -80,7 +80,7 @@ export const CostsAndPODSection = ({
 
                         <Button
                             onClick={onNext}
-                            className="flex w-full items-center justify-center gap-3 rounded bg-[#ea690c] px-6 py-3 hover:bg-[#ea690c]/90 sm:w-auto"
+                            className="flex w-full items-center justify-center gap-3 rounded bg-[#007bff] px-6 py-3 hover:bg-[#007bff]/90 sm:w-auto"
                         >
                             <span className="font-body-md-semibold text-white">Continue to Review</span>
                             <ArrowRightIcon className="w-6 h-6" />
@@ -96,8 +96,8 @@ export const CostsAndPODSection = ({
         <Card className="w-full rounded-2xl border border-[#d1d1d1] bg-white shadow-sm">
             <CardContent className="flex flex-col gap-6 p-4 sm:p-6">
                 <header className="inline-flex items-center gap-2">
-                    <CalculatorIcon className="w-6 h-6 text-[#ea690c]" />
-                    <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#ea690c] text-[length:var(--body-lg-semibold-font-size)]">
+                    <CalculatorIcon className="w-6 h-6 text-[#007bff]" />
+                    <h1 className="font-body-lg-semibold font-[number:var(--body-lg-semibold-font-weight)] text-[#007bff] text-[length:var(--body-lg-semibold-font-size)]">
                         Costs & Payment On Delivery (POD)
                     </h1>
                 </header>
@@ -181,7 +181,7 @@ export const CostsAndPODSection = ({
 
                         <Button
                             onClick={handleNext}
-                            className="flex w-full items-center justify-center gap-3 rounded bg-[#ea690c] px-6 py-3 hover:bg-[#ea690c]/90 sm:w-auto"
+                            className="flex w-full items-center justify-center gap-3 rounded bg-[#007bff] px-6 py-3 hover:bg-[#007bff]/90 sm:w-auto"
                         >
                             <span className="font-body-md-semibold text-white">Complete Registration</span>
                             <ArrowRightIcon className="w-6 h-6" />
